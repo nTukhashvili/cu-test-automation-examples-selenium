@@ -14,7 +14,7 @@ public class FormFill {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
 
-        driver.manage().window().setSize(new Dimension(1280,720));
+        driver.manage().window().maximize();
 
         driver.get("https://qavalidation.com/demo-form/");
 

@@ -2,7 +2,6 @@ package org.example;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 /* გამოსადეგი shortcut-ები
@@ -13,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BasicCommands {
     public static void main(String[] args) throws InterruptedException {
         //ვუთითებთ ქრომის დრაივერის ლოკაციას
-        System.setProperty("webdriver.chrome.driver", "C:/Users/white/Documents/browser-drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "path to driver");
 
         //ვქმნით chrome ბრაუზერის ინსტანს, ავტომატურად იხსნება ცარიელი ფანჯარა
         WebDriver driver = new ChromeDriver();
