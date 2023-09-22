@@ -50,6 +50,7 @@ public class FormFill {
         //id ლოკატორით ვეძებთ text fields და ვწერთ ტექსტს
         driver.findElement(By.id("contact-form-comment-g4072-otherdetails")).sendKeys("SOME TEXT");
 
+        Thread.sleep(2000);
         //className ლოკატორით ვეძებთ submit ღილაკს და ვაკლიკეთ
         driver.findElement(By.className("wp-block-button__link")).click();
 

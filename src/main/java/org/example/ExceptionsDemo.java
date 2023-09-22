@@ -12,33 +12,33 @@ public class ExceptionsDemo {
         driver.manage().window().maximize();
 //        driver.get("https://www.saucedemo.com/");
 //
+//
 //        try{
 //            driver.findElement(By.id("john Cena"));
 //        }
-//        catch (NoSuchElementException e){
-//            System.out.println(e.toString());
+//        catch (NoSuchElementException e)
+//        {
+//            System.out.println(e.getMessage());
 //        }
 //
 //        Thread.sleep(1000);
 //
-//      //ElementNotInteractableException - როცა სამიზნე ელემენტს ფარავს სხვა webelement-ი
+      //ElementNotInteractableException - როცა სამიზნე ელემენტს ფარავს სხვა webelement-ი
 //        driver.get("https://demoqa.com/automation-practice-form");
-//        try{
-//            driver.findElement(By.xpath("//*[@id=\"gender-radio-1\"]")).click();
-//        }
-//        catch (ElementNotInteractableException e) {
-//            System.out.println(e.getMessage());
-//        }
 //
-//
-//        //StaleElementException
+//        driver.findElement(By.xpath("//*[@id='gender-radio-1']")).click();
+
+
+
+
+        //StaleElementException
 //        Thread.sleep(2000);
 //        driver.get("https://www.worldometers.info/");
 //        WebElement firstPart =  driver.findElement(By.xpath(" //span[@rel='current_population']//span[contains(@class,'rts-nr-int rts-nr-')][1]"));
 //        Thread.sleep(2000);
 //        firstPart.click();
 
-        //NoSuchWindowException
+//        NoSuchWindowException
 //        String tab1 =  driver.getWindowHandle();
 //        driver.switchTo().newWindow(WindowType.TAB);
 //        String tab2 = driver.getWindowHandle();
