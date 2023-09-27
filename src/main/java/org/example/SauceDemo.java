@@ -20,14 +20,6 @@ public class SauceDemo {
         driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys("standard_user");
         driver.findElement(By.cssSelector("input[id='password']")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        List<WebElement> addToCartButtons = driver.findElements(By.xpath("//div[@class='inventory_item']//button"));
-
-        for (WebElement el: addToCartButtons
-             ) {
-            Thread.sleep(1000);
-            el.click();
-
-        }
 
 
     }
