@@ -20,17 +20,18 @@ public class Task_1 {
         driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");
         driver.findElement(By.cssSelector("#password")).sendKeys("secret_sauce");
         driver.findElement(By.cssSelector("#login-button")).click();
+        Thread.sleep(2000);
 
         //ნაბიჯები 8-12
         driver.findElement(By.xpath("//select[@class='product_sort_container']")).click();
         driver.findElement(By.xpath("//select[@class='product_sort_container']//option[text()='Price (low to high)']")).click();
-
+        Thread.sleep(2000);
         //ალტერნატიულად შეგიძლიათ გამოიყენოთ ინექსი თუ კი დაალების პირობაში არ არის მოთხოვნა მაგალითად
         //driver.findElement(By.xpath("//select[@class=\"product_sort_container\"]//option[2];
 
         WebElement lastItem = driver.findElement(By.xpath("//div[@class='inventory_item'][last()]//button"));
         lastItem.click();
-
+        Thread.sleep(2000);
         //Xpath-ის განმარტება: ვეძენთ ნებისმიერ ელემენტს რომელიც მოიცავს სიტყვა T-shirt-ს შემდეგ ავდივართ ზედა დოენზე //ancestor ბრძანებით რათა მივწვდებთ add to art button-ს
         List<WebElement> tShirts = driver.findElements(By.xpath("//*[contains(text(),'T-Shirt')]//ancestor::div[@class='inventory_item']//button"));
 
@@ -47,9 +48,12 @@ public class Task_1 {
         driver.findElement(By.xpath("//*[@id='shopping_cart_container']")).click();
         driver.findElement(By.id("checkout")).click();
         driver.findElement(By.xpath("//*[@data-test='firstName']")).sendKeys("Nika");
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id='last-name']")).sendKeys("Tukhashvili");
         driver.findElement(By.name("postalCode")).sendKeys("999");
+        Thread.sleep(2000);
         driver.findElement(By.cssSelector("input[value='Continue']")).click();
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id='finish']")).click();
 
         System.out.println(driver.findElement(By.xpath("//*[@id='checkout_complete_container']/h2")).getText());
