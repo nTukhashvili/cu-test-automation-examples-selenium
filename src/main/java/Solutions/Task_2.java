@@ -5,6 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.regex.Pattern;
 
 public class Task_2 {
     public static void main(String[] args) throws InterruptedException {
@@ -22,11 +27,16 @@ public class Task_2 {
         act.clickAndHold(item4).moveToElement(item1).release().perform();
         WebElement confirmation =  driver.findElement(By.id("draggable"));
         WebElement confirmDestination =  driver.findElement(By.id("confirmBox"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         act.clickAndHold(confirmation)
                 .moveToElement(confirmDestination)
                 .release()
                 .perform();
+        Thread.sleep(2000);
+
+        // ველოდებით მანამ სანამ საძიებო ელემენტში მეორე არგუმენტად გადაწოდებული სტრინგი
+        wait.until(ExpectedConditions.textToBe(By.id("confirmBox"),"Confirmed"));
 
         driver.findElement(By.xpath("//button[@data-btn='submitBtn']")).click();
         Thread.sleep(1000);
