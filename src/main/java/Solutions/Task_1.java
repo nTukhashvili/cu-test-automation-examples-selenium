@@ -26,13 +26,13 @@ public class Task_1 {
         driver.findElement(By.xpath("//select[@class='product_sort_container']")).click();
         driver.findElement(By.xpath("//select[@class='product_sort_container']//option[text()='Price (low to high)']")).click();
         Thread.sleep(2000);
-        //ალტერნატიულად შეგიძლიათ გამოიყენოთ ინექსი თუ კი დაალების პირობაში არ არის მოთხოვნა მაგალითად
+        //ალტერნატიულად შეგიძლიათ გამოიყენოთ ინდექსი თუ კი დავალების პირობაში არ არის მოთხოვნა მაგალითად
         //driver.findElement(By.xpath("//select[@class=\"product_sort_container\"]//option[2];
 
         WebElement lastItem = driver.findElement(By.xpath("//div[@class='inventory_item'][last()]//button"));
         lastItem.click();
         Thread.sleep(2000);
-        //Xpath-ის განმარტება: ვეძენთ ნებისმიერ ელემენტს რომელიც მოიცავს სიტყვა T-shirt-ს შემდეგ ავდივართ ზედა დოენზე //ancestor ბრძანებით რათა მივწვდებთ add to art button-ს
+        //Xpath-ის განმარტება: ვეძენთ ნებისმიერ ელემენტს რომელიც მოიცავს სიტყვა T-shirt-ს შემდეგ ავდივართ ზედა დონეზე //ancestor ბრძანებით რათა მივწვდეთ add to cart button-ს
         List<WebElement> tShirts = driver.findElements(By.xpath("//*[contains(text(),'T-Shirt')]//ancestor::div[@class='inventory_item']//button"));
 
         Thread.sleep(2000);
