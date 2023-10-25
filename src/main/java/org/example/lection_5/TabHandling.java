@@ -1,4 +1,4 @@
-package lection_5;
+package org.example.lection_5;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;

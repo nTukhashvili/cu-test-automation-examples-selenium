@@ -1,4 +1,4 @@
-package Solutions;
+package org.example.lection_6;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

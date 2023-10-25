@@ -1,3 +1,5 @@
+package org.example.lection_6;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,19 +13,18 @@ public class AsyncDemo {
         // Navigate to a blank page
         driver.get("about:blank");
 
-        // Execute asynchronous JavaScript code
+        // Execute async JavaScript code
         js.executeScript(
                 "setTimeout(function() {" +
                         "    document.body.innerHTML = '<div id=\"asyncDiv\">Asynchronous Content Loaded</div>';" +
                         "}, 2000);"
         );
 
-        // Execute synchronous JavaScript code immediately after
+        // Execute synchronous JavaScript code
         js.executeScript(
                 "document.body.innerHTML += '<div id=\"syncDiv\">Synchronous Content Loaded</div>';"
         );
 
-        // Try to find the element added by the asynchronous code
         try {
             WebElement asyncElement = driver.findElement(By.id("asyncDiv"));
             System.out.println("Found async element: " + asyncElement.getText());
@@ -42,7 +43,6 @@ public class AsyncDemo {
             e.printStackTrace();
         }
 
-        // Now, try to find the element added by the asynchronous code again
         WebElement asyncElementAfterWait = driver.findElement(By.id("asyncDiv"));
         System.out.println("Found async element after waiting: " + asyncElementAfterWait.getText());
     }
