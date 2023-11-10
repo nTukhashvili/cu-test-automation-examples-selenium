@@ -1,24 +1,17 @@
-package org.example.lection_7;
+package org.example.lecture_7;
 
 import com.codeborne.selenide.*;
-import com.codeborne.selenide.selector.ByTagAndText;
-import com.codeborne.selenide.selector.ByText;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
-
-import java.util.List;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.WebDriverRunner.*;
-import static com.codeborne.selenide.WebDriverRunner.url;
-import static com.codeborne.selenide.WebDriverConditions.*;
 
 public class SelenideDemo {
 

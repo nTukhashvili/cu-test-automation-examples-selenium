@@ -1,15 +1,7 @@
-package org.example.lection_3;
+package org.example.lecture_3;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.Action;
-
-
-import java.time.Duration;
-import java.util.List;
 
 public class SauceDemo {
     public static void main(String[] args) throws InterruptedException {

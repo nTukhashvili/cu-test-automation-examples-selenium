@@ -1,9 +1,7 @@
-package org.example.lection_3;
+package org.example.lecture_3;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.List;
 
 public class ExceptionsDemo {
     public static void main(String[] args) throws InterruptedException {

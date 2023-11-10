@@ -1,20 +1,14 @@
-package org.example.lection_4;
+package org.example.lecture_4;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v116.network.model.ConnectTiming;
 import org.openqa.selenium.devtools.v85.network.Network;
 import org.openqa.selenium.devtools.v85.network.model.ConnectionType;
-import org.openqa.selenium.mobile.NetworkConnection;
-import org.openqa.selenium.TimeoutException;
 
 import java.time.Duration;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 
 public class ImplicitWaits {
     public static void main(String[] args) throws InterruptedException {
