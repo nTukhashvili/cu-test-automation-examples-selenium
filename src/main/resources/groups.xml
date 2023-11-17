@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-
-    <parameter name="browserWindowSize" value="1600x900"/>
-    <parameter name="url" value="https://www.google.com"/>
     <test verbose="2" preserve-order="true"
-          name="C:/Users/white/Desktop/cu-test-automation-examples-selenium/src/main/java/org/example/lecture_8/Parameters.java">
+          name="C:/Users/white/Desktop/cu-test-automation-examples-selenium/src/main/java/org/example/lecture_8/GroupingTests.java">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         <classes>
-            <class name="org.example.lecture_8.Parameters">
-                <methods>
-                    <include name="simpleTest"/>
-                </methods>
+
+            <class name="org.example.lecture_8.GroupingTests">
             </class>
         </classes>
     </test>
