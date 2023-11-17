@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
-
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -18,15 +17,13 @@ public class SelenideDemo {
     @Test
     public void googleSearchTest() throws InterruptedException {
         //Selenide-ის კონფიგურაცია
-        Configuration.browser = "chrome";
         //დეფაულტად 4 წამს ელოდება
         Configuration.timeout = 5000;
-        Configuration.headless = true;
-//        Configuration.browserSize = "1920x1080";
-//        Configuration.pageLoadTimeout = 20000;
-//        Configuration.clickViaJs = true;
-//        Configuration.reportsFolder = "path";
-
+        Configuration.headless = false;
+        Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadTimeout = 20000;
+        Configuration.clickViaJs = true;
+        Configuration.reportsFolder = "path";
 
         //open ბრძანებით ვხსნით default ბრაუზერს და გადავდივართ მითითებულს ბმულზე
         open("https://www.google.com");
@@ -116,9 +113,6 @@ public class SelenideDemo {
         ElementsCollection itemList = $$(byXpath("//*[@id='verticalListContainer']//li"));
         itemList.shouldHave(CollectionCondition.itemWithText("Cras justo odio"));
         //itemList.shouldHave(CollectionCondition.anyMatch("items with 10 charactes or more", e -> e.getText().length() > 100));
-
-
-
     }
 
     @Test
@@ -168,11 +162,8 @@ public class SelenideDemo {
         for (SelenideElement el: els
              ) {
             System.out.println(el.getText());
-
         }
 
-
     }
-
-    }
+}
 
