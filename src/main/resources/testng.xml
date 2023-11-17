@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/white/Desktop/cu-test-automation-examples-selenium">
+        <classes>
+<!--            <class name="org.example.lecture_7.Task_3">-->
+<!--                <methods>-->
+<!--                    <include name="task_3"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="org.example.lecture_7.SelenideDemo">-->
+<!--                <methods>-->
+<!--                    <include name="googleSearchTest"/>-->
+<!--                    <include name="fillForm"/>-->
+<!--                    <include name="jsClick"/>-->
+<!--                    <include name="collections"/>-->
+<!--                    <include name="collectionsConditions"/>-->
+<!--                    <include name="navigation"/>-->
+<!--                    <include name="alerts"/>-->
+<!--                    <include name="googleSearch"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="org.example.lecture_8.TestNGDemo">-->
+<!--                <methods>-->
+<!--                    <include name="BasicTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="org.example.lecture_8.TestStructure">
+                <methods>
+                    <include name="setup"/>
+                    <include name="executeSteps"/>
+                    <include name="teardown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
